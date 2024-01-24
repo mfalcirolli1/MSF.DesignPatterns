@@ -1,0 +1,18 @@
+﻿Objetivo
+	Definir uma família de algoritmos, encapsular cada uma delas e torná-las intercambiáveis.
+	Permite que o algoritmo varie independentemente dos clientes que o utilizam.
+
+Quando utilizar?
+	* Muitas classes relacionadas que diferem somente no seu comportamento.
+	* Necessidade de várias soluções para o mesmo problema.
+	* Se estiver utilizando muitas condicionais (if), mova cada regra em uma classe separada.
+
+Participantes
+	* Strategy: Uma interface comum para todas as classes. A classe 'Context' usa essa interface
+	  para chamar o 'ConcreteStrategy'
+	* ConcreteStrategy: Implementa uma solução especcífica do problema.
+	* Context: Utiliza objetos ConcreteStrategy e tem dependência do objeto Strategy.
+
+
+
+	

@@ -6,6 +6,9 @@ using MSF.DesignPatterns._1___Decorator.Pizza.Interface;
 using MSF.DesignPatterns._1___Decorator.Pizza.Objects;
 using MSF.DesignPatterns._2___Factory_Method.ConcreteCreator.CartaoCredito;
 using MSF.DesignPatterns._2___Factory_Method.Creator;
+using MSF.DesignPatterns._3___Strategy.ConcreteStrategy;
+using MSF.DesignPatterns._3___Strategy.Context;
+using MSF.DesignPatterns._3___Strategy.Strategy;
 using System;
 using System.Diagnostics;
 
@@ -14,7 +17,8 @@ namespace MSF.DesignPatterns
     internal class Program
     {
         public static bool RunDecorator { get; set; } = false;
-        public static bool RunFactoryMethod { get; set; } = true;
+        public static bool RunFactoryMethod { get; set; } = false;
+        public static bool RunStrategy { get; set; } = true;
 
         static void Main(string[] args)
         {
@@ -75,6 +79,27 @@ namespace MSF.DesignPatterns
                 var obj = cartaoCredito.BuscarCartaoCredito();
                 Console.WriteLine($"Tipo: {obj.Tipo}\nLimite: {obj.Limite}\nAnuidade: {obj.CobrancaAnual}");
                 Console.ReadLine();
+            }
+
+            #endregion
+
+            #region Strategy - Behavioral  
+
+            if (RunStrategy)
+            {
+                var calculadora = new CalculadoraContext();
+
+                calculadora.Add("sum", new Somar());
+                calculadora.Add("sub", new Subtrair());
+                calculadora.Add("mult", new Multiplicar());
+                calculadora.Add("div", new Dividir());
+
+                var operacao = Console.ReadLine();
+
+                IStrategy acao = calculadora.Get(operacao);
+                calculadora.Set(acao);
+
+                Console.WriteLine($"Resultado: {calculadora.Calcular(1, 2)}");
             }
 
             #endregion
