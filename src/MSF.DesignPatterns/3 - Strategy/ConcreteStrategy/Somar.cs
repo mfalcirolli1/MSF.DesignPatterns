@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MSF.DesignPatterns._3___Strategy.ConcreteStrategy
 {
-    public class Somar : IStrategy
+    public class Somar : ICalculadoraStrategy
     {
         public int Calcular(int a, int b)
         {

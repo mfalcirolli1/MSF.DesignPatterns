@@ -87,18 +87,22 @@ namespace MSF.DesignPatterns
 
             if (RunStrategy)
             {
+                var operacao = Console.ReadLine();
                 var calculadora = new CalculadoraContext();
 
+                // Adicionar as operações no dicionário
                 calculadora.Add("sum", new Somar());
                 calculadora.Add("sub", new Subtrair());
                 calculadora.Add("mult", new Multiplicar());
                 calculadora.Add("div", new Dividir());
 
-                var operacao = Console.ReadLine();
+                // Resgatar a classe de acordo com a operação desejada
+                ICalculadoraStrategy acao = calculadora.Get(operacao);
 
-                IStrategy acao = calculadora.Get(operacao);
+                // Setar o strategy no contexto
                 calculadora.Set(acao);
 
+                // Executar
                 Console.WriteLine($"Resultado: {calculadora.Calcular(1, 2)}");
             }
 

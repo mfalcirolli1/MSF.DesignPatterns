@@ -8,21 +8,21 @@ namespace MSF.DesignPatterns._3___Strategy.Context
 {
     public class CalculadoraContext
     {
-        private IStrategy _strategy;
-        private readonly Dictionary<string, IStrategy> _dictionaryStrategy = new Dictionary<string, IStrategy>();
+        private ICalculadoraStrategy _strategy;
+        private readonly Dictionary<string, ICalculadoraStrategy> _dictionaryStrategy = new Dictionary<string, ICalculadoraStrategy>();
 
-        public void Add(string key, IStrategy strategy)
+        public void Add(string key, ICalculadoraStrategy strategy)
         {
             _dictionaryStrategy.Add(key, strategy);
         }
 
-        public IStrategy Get(string key)
+        public ICalculadoraStrategy Get(string key)
         {
             var strategy = _dictionaryStrategy.FirstOrDefault(x => x.Key == key).Value;
             return strategy;
         }
 
-        public void Set(IStrategy strategy)
+        public void Set(ICalculadoraStrategy strategy)
         {
             _strategy = strategy;
         }
