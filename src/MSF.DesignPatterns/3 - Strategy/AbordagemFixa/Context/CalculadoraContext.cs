@@ -1,10 +1,8 @@
-﻿using MSF.DesignPatterns._3___Strategy.Strategy;
-using System;
+﻿using MSF.DesignPatterns._3___Strategy.AbordagemFixa.Strategy;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace MSF.DesignPatterns._3___Strategy.Context
+namespace MSF.DesignPatterns._3___Strategy.AbordagemFixa.Context
 {
     public class CalculadoraContext
     {

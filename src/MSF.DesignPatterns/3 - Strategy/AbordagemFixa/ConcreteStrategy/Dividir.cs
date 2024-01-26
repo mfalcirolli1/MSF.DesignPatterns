@@ -1,9 +1,7 @@
-﻿using MSF.DesignPatterns._3___Strategy.Strategy;
+﻿using MSF.DesignPatterns._3___Strategy.AbordagemFixa.Strategy;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MSF.DesignPatterns._3___Strategy.ConcreteStrategy
+namespace MSF.DesignPatterns._3___Strategy.AbordagemFixa.ConcreteStrategy
 {
     public class Dividir : ICalculadoraStrategy
     {
