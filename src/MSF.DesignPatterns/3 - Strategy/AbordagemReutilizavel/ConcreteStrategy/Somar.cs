@@ -1,7 +1,7 @@
 ﻿using MSF.DesignPatterns._3___Strategy.AbordagemReutilizavel.Model;
 using MSF.DesignPatterns._3___Strategy.AbordagemReutilizavel.Strategy;
 
-namespace MSF.DesignPatterns._3___Strategy.ConcreteStrategy
+namespace MSF.DesignPatterns._3___Strategy.AbordagemReutilizavel.ConcreteStrategy
 {
     public class Somar : IStrategy<Numeros, int>
     {

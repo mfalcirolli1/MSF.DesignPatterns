@@ -2,7 +2,7 @@
 using MSF.DesignPatterns._3___Strategy.AbordagemReutilizavel.Strategy;
 
 
-namespace MSF.DesignPatterns._3___Strategy.ConcreteStrategy
+namespace MSF.DesignPatterns._3___Strategy.AbordagemReutilizavel.ConcreteStrategy
 {
     public class Multiplicar : IStrategy<Numeros, int>
     {

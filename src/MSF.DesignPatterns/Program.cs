@@ -6,9 +6,9 @@ using MSF.DesignPatterns._1___Decorator.Pizza.Interface;
 using MSF.DesignPatterns._1___Decorator.Pizza.Objects;
 using MSF.DesignPatterns._2___Factory_Method.ConcreteCreator.CartaoCredito;
 using MSF.DesignPatterns._2___Factory_Method.Creator;
-using MSF.DesignPatterns._3___Strategy.ConcreteStrategy;
-using MSF.DesignPatterns._3___Strategy.Context;
-using MSF.DesignPatterns._3___Strategy.Strategy;
+using MSF.DesignPatterns._3___Strategy.AbordagemFixa.ConcreteStrategy;
+using MSF.DesignPatterns._3___Strategy.AbordagemFixa.Context;
+using MSF.DesignPatterns._3___Strategy.AbordagemFixa.Strategy;
 using System;
 using System.Diagnostics;
 
